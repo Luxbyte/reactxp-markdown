@@ -3,6 +3,13 @@ Plugin for [ReactXP](https://microsoft.github.io/reactxp/) that provides support
 
 ## Documentation
 
+### Markdown Properties
+| Prop         | Type            | Default  | Note |
+|--------------|-----------------|----------|------|
+| input        | String          |          | Markdown to render |
+| className    | String          | markdown-container      | className of wrapper container (Web only) |
+| style        | Object          |          | Custom styles for markdown elements (Native only) |
+
 ### Prerequisites
 * [ReactXP](https://github.com/microsoft/reactxp/)
 

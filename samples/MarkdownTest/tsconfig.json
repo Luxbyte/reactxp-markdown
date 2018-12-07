@@ -7,16 +7,15 @@
     "noResolve": false,
     "jsx": "react",
     "reactNamespace": "RX",
-    "target": "es6",
+    "module": "commonjs",
+    "target": "es5",
     "experimentalDecorators": true,
     "sourceMap": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "allowJs": true,
     "outDir": "./dist/",
-    "types": [
-      "node"
-    ]
+    "types": []
   },
   "include": [
     "./src/**/*"

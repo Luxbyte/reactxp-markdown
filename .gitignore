@@ -11,9 +11,9 @@ node_modules
 
 # Build artifacts
 **/dist
+**/build
 
 # Miscellaneous user files
 *.user
 .vscode
 .DS_STORE
-

@@ -18,8 +18,9 @@ class Markdown extends React.Component {
 
   render() {
     return (
-      <Markdown
+      <ReactMarkdown
         source={this.props.input}
+        className={this.props.className || "markdown-container"}
       />
     );
   }

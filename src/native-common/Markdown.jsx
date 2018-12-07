@@ -9,7 +9,7 @@
 let React = require('react');
 let ReactDOM = require('react-dom');
 let RX = require('reactxp');
-let ReactMarkdown = require('react-native-markdown-renderer');
+import ReactMarkdown from 'react-native-markdown-renderer';
 
 class Markdown extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class Markdown extends React.Component {
 
   render() {
     return (
-      <Markdown>{this.props.input}</Markdown>
+      <ReactMarkdown style={this.props.style}>{this.props.input}</ReactMarkdown>
     );
   }
 }

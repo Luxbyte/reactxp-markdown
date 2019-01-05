@@ -5,6 +5,11 @@ Based on [react-native-markdown-renderer](https://github.com/mientjan/react-nati
 
 ## Updates
 
+### Version 0.0.4
+* Fixed default styles (heading, lists)
+* Fixed images
+* Added HTML to markdown
+
 ### Version 0.0.3
 * Repo has been rewritten to use the same logic for web and native.
 

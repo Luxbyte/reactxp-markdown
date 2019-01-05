@@ -1,6 +1,7 @@
 var React = require('react');
-var { Text, View, Image } = require('reactxp');
+var { Text, View, WebView } = require('reactxp');
 
+import ResizeImage from './resizeImage';
 import openUrl from './util/openUrl';
 import hasParents from './util/hasParents';
 import applyStyle from './util/applyStyle';
@@ -229,8 +230,12 @@ const renderRules = {
   // br
   softbreak: (node, children, parent, styles) => <Text key={node.key}>{'\n'}</Text>,
   image: (node, children, parent, styles) => {
-    return <Image indicator={true} key={node.key} style={styles.image} source={{ uri: node.attributes.src }} />;
+    return <ResizeImage key={node.key} style={styles.image} src={node.attributes.src} title={node.attributes.title}/>;
   },
+
+  html_block: (node, children, parent, styles) => {
+    return <WebView key={node.key} style={styles.webView} source={{html: node.content}} sandbox={(1 << 6) + (1 << 7) + (1 << 8)}/>;
+  }
 };
 
 export default renderRules;

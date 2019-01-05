@@ -13,13 +13,13 @@ export const styles = {
     backgroundColor: '#f5f5f5',
     padding: 10,
     borderRadius: 4,
+    fontFamily: 'Courier'
   },
   codeInline: {
-    borderWidth: 1,
-    borderColor: '#CCCCCC',
-    backgroundColor: '#f5f5f5',
-    padding: 10,
+    backgroundColor: '#f3f4f4',
     borderRadius: 4,
+    padding: 2,
+    fontFamily: 'Courier'
   },
   del: {
     backgroundColor: '#000000',
@@ -81,18 +81,25 @@ export const styles = {
   listUnorderedItemIcon: {
     marginLeft: 10,
     marginRight: 10,
+    top: 0,
     ...Platform.select({
       [PlatformEnum.IOS]: {
         lineHeight: 36,
+        height: 36
       },
       [PlatformEnum.ANDROID]: {
         lineHeight: 30,
+        height: 30
+      },
+      [PlatformEnum.WEB]: {
+        lineHeight: "38px",
+        height: 38
       },
     }),
   },
   listUnorderedItemText: {
     fontSize: 20,
-    lineHeight: 20,
+    lineHeight: 20
   },
 
   listOrdered: {},
@@ -105,15 +112,21 @@ export const styles = {
     ...Platform.select({
       [PlatformEnum.IOS]: {
         lineHeight: 36,
+        height: 36
       },
       [PlatformEnum.ANDROID]: {
         lineHeight: 30,
+        height: 30,
+      },
+      [PlatformEnum.WEB]: {
+        lineHeight: "38px",
+        height: 38
       },
     }),
   },
   listOrderedItemText: {
     fontWeight: 'bold',
-    lineHeight: 20,
+    lineHeight: 20
   },
   paragraph: {
     marginTop: 10,
@@ -169,6 +182,10 @@ export const styles = {
     borderBottomWidth: 1,
   },
   image: {
-    flex: 1,
+    maxWidth: '100%'
   },
+  webView: {
+    height: 150,
+    overflow: 'hidden'
+  }
 };

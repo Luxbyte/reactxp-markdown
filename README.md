@@ -5,6 +5,11 @@ Based on [react-native-markdown-renderer](https://github.com/mientjan/react-nati
 
 ## Updates
 
+### Version 0.0.5
+* Made text selectable (web)
+* Fixed text wrap in web
+* Fixed image loading in iOS
+
 ### Version 0.0.4
 * Fixed default styles (heading, lists)
 * Fixed images

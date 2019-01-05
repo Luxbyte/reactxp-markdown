@@ -11,33 +11,33 @@ const renderRules = {
   unknown: (node, children, parent, styles) => {
     return (
       <View key={node.key}>
-        <Text>{node.type}</Text>
+        <Text selectable={true}>{node.type}</Text>
       </View>
     );
   },
 
   textgroup: (node, children, parent, styles) => {
     return (
-      <Text key={node.key} style={styles.text}>
+      <Text selectable={true} key={node.key} style={styles.text}>
         {children}
       </Text>
     );
   },
 
   inline: (node, children, parent, styles) => {
-    return <Text key={node.key}>{children}</Text>;
+    return <Text selectable={true} key={node.key}>{children}</Text>;
   },
 
   text: (node, children, parent, styles) => {
-    return <Text key={node.key}>{node.content}</Text>;
+    return <Text selectable={true} key={node.key}>{node.content}</Text>;
   },
   span: (node, children, parent, styles) => {
-    return <Text key={node.key}>{children}</Text>;
+    return <Text selectable={true} key={node.key}>{children}</Text>;
   },
 
   strong: (node, children, parent, styles) => {
     return (
-      <Text key={node.key} style={styles.strong}>
+      <Text selectable={true} key={node.key} style={styles.strong}>
         {children}
       </Text>
     );
@@ -45,7 +45,7 @@ const renderRules = {
 
   s: (node, children, parent, styles) => {
     return (
-      <Text key={node.key} style={styles.strikethrough}>
+      <Text selectable={true} key={node.key} style={styles.strikethrough}>
         {children}
       </Text>
     );
@@ -53,7 +53,7 @@ const renderRules = {
   // a
   link: (node, children, parent, styles) => {
     return (
-      <Text key={node.key} style={styles.link} onPress={() => openUrl(node.attributes.href)}>
+      <Text selectable={true} key={node.key} style={styles.link} onPress={() => openUrl(node.attributes.href)}>
         {children}
       </Text>
     );
@@ -68,7 +68,7 @@ const renderRules = {
   },
   em: (node, children, parent, styles) => {
     return (
-      <Text key={node.key} style={styles.em}>
+      <Text selectable={true} key={node.key} style={styles.em}>
         {children}
       </Text>
     );
@@ -126,21 +126,21 @@ const renderRules = {
   ),
   code_inline: (node, children, parent, styles) => {
     return (
-      <Text key={node.key} style={styles.codeInline}>
+      <Text selectable={true} key={node.key} style={styles.codeInline}>
         {node.content}
       </Text>
     );
   },
   code_block: (node, children, parent, styles) => {
     return (
-      <Text key={node.key} style={styles.codeBlock}>
+      <Text selectable={true} key={node.key} style={styles.codeBlock}>
         {node.content}
       </Text>
     );
   },
   fence: (node, children, parent, styles) => {
     return (
-      <Text key={node.key} style={styles.codeBlock}>
+      <Text selectable={true} key={node.key} style={styles.codeBlock}>
         {node.content}
       </Text>
     );
@@ -170,7 +170,7 @@ const renderRules = {
     if (hasParents(parent, 'bullet_list')) {
       return (
         <View key={node.key} style={styles.listUnorderedItem}>
-          <Text style={styles.listUnorderedItemIcon}>{'\u00B7'}</Text>
+          <Text selectable={true} style={styles.listUnorderedItemIcon}>{'\u00B7'}</Text>
           <View style={[styles.listItem]}>{children}</View>
         </View>
       );
@@ -179,7 +179,7 @@ const renderRules = {
     if (hasParents(parent, 'ordered_list')) {
       return (
         <View key={node.key} style={styles.listOrderedItem}>
-          <Text style={styles.listOrderedItemIcon}>{node.index + 1}{node.markup}</Text>
+          <Text selectable={true} style={styles.listOrderedItemIcon}>{node.index + 1}{node.markup}</Text>
           <View style={[styles.listItem]}>{children}</View>
         </View>
       );

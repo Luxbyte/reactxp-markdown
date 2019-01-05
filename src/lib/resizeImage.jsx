@@ -10,23 +10,28 @@ export default class ResizeImage extends React.Component {
     }
   }
 
-  onLoad = (dim) => {
-    this.setState({
-      dimension: {
-        width: dim.width,
-        height: dim.height
-      }
-    });
+  componentDidMount = () => {
+    let self = this;
+    Image.getMetadata(this.props.src).then(function(data) {
+      self.setState({
+        dimension: {
+          width: data.width,
+          height: data.height
+        }
+      });
+    })
   }
 
   render() {
     let { style, src, title } = this.props;
-    let styles = [];
-    if (this.state.dimension) {
-      styles.push(this.state.dimension);
-    }
-    styles.push(style);
 
-    return <Image style={styles} source={src} accessibilityLabel={title} onLoad={this.onLoad}/>;
+    if (this.state.dimension) {
+      let styles = [style];
+      if (this.state.dimension) {
+        styles.push(this.state.dimension);
+      }
+      return <Image style={styles} source={this.props.src} accessibilityLabel={title}/>;
+    }
+    return null;
   }
 }

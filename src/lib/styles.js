@@ -164,7 +164,9 @@ export const styles = {
     flex: 1,
     padding: 5,
   },
-  text: {},
+  text: {
+    maxWidth: '100%'
+  },
   strikethrough: {
     textDecorationLine: 'line-through',
   },
@@ -182,7 +184,9 @@ export const styles = {
     borderBottomWidth: 1,
   },
   image: {
-    maxWidth: '100%'
+    maxWidth: '100%',
+    width: 100,
+    height: 100
   },
   webView: {
     height: 150,

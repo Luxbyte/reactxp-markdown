@@ -14,7 +14,7 @@ export default function applyStyle(children, styles, type) {
 
   return children.map(child => {
     if (child.type.name === type) {
-      return <Text key={child.key} {...child.props} style={[].concat(child.props.style, styles)} />;
+      return <Text selectable={true} key={child.key} {...child.props} style={[].concat(child.props.style, styles)} />;
     }
 
     return child;

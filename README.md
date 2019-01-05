@@ -1,14 +1,16 @@
 # reactxp-markdown [![npm version](https://img.shields.io/npm/v/reactxp-markdown.svg?style=flat)](https://www.npmjs.com/package/reactxp-markdown)
 Plugin for [ReactXP](https://microsoft.github.io/reactxp/) that provides support for Google Maps for Web, Android and iOS.
 
+Based on [react-native-markdown-renderer](https://github.com/mientjan/react-native-markdown-renderer).
+
+## Updates
+
+### Version 0.0.3
+* Repo has been rewritten to use the same logic for web and native.
+
 ## Documentation
 
-### Markdown Properties
-| Prop         | Type            | Default  | Note |
-|--------------|-----------------|----------|------|
-| input        | String          |          | Markdown to render |
-| className    | String          | markdown-container      | className of wrapper container (Web only) |
-| style        | Object          |          | Custom styles for markdown elements (Native only) |
+See [react-native-markdown-renderer](https://github.com/mientjan/react-native-markdown-renderer)
 
 ### Prerequisites
 * [ReactXP](https://github.com/microsoft/reactxp/)

@@ -15,7 +15,9 @@
     "noImplicitReturns": true,
     "allowJs": true,
     "outDir": "./dist/",
-    "types": []
+    "types": [
+      "node"
+    ]
   },
   "include": [
     "./src/**/*"

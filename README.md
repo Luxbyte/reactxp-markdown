@@ -22,6 +22,8 @@ Based on [react-native-markdown-renderer](https://github.com/mientjan/react-nati
 
 See [react-native-markdown-renderer](https://github.com/mientjan/react-native-markdown-renderer)
 
+__Hint__: If images are not showing up on iOS, enable typographer in the MarkdownIt settings.
+
 ### Prerequisites
 * [ReactXP](https://github.com/microsoft/reactxp/)
 

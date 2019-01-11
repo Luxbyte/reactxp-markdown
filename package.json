@@ -1,6 +1,6 @@
 {
   "name": "reactxp-markdown",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Plugin for ReactXP that provides support for Markdown for Web, iOS and Android",
   "repository": "github:Fulanko/reactxp-markdown",
   "main": "./dist/index.js",

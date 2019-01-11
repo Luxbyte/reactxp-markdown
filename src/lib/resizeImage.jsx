@@ -8,18 +8,26 @@ export default class ResizeImage extends React.Component {
     this.state = {
       dimension: null
     }
+    this._isMounted = false;
   }
 
   componentDidMount = () => {
     let self = this;
+    this._isMounted = true;
     Image.getMetadata(this.props.src).then(function(data) {
-      self.setState({
-        dimension: {
-          width: data.width,
-          height: data.height
-        }
-      });
+      if (self._isMounted) {
+        self.setState({
+          dimension: {
+            width: data.width,
+            height: data.height
+          }
+        });
+      }
     })
+  }
+
+  componentWillUnmount = () => {
+    this._isMounted = false;
   }
 
   render() {

@@ -5,6 +5,9 @@ Based on [react-native-markdown-renderer](https://github.com/mientjan/react-nati
 
 ## Updates
 
+### Version 0.0.7
+* Updated dependencies to fix vulnerabilities
+
 ### Version 0.0.5
 * Made text selectable (web)
 * Fixed text wrap in web

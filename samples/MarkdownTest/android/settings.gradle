@@ -1,2 +1,3 @@
+rootProject.name = 'markdowntest'
 
 include ':app'

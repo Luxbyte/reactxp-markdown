@@ -3,6 +3,11 @@ Plugin for [ReactXP](https://microsoft.github.io/reactxp/) that provides support
 
 Based on [react-native-markdown-renderer](https://github.com/mientjan/react-native-markdown-renderer).
 
+## Installation
+```
+npm install --save reactxp-markdown
+```
+
 ## Updates
 
 ### Version 0.0.8

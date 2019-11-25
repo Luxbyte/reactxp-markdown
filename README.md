@@ -36,7 +36,7 @@ __Hint__: If images are not showing up on iOS, enable typographer in the Markdow
 * [ReactXP](https://github.com/microsoft/reactxp/)
 
 ### Samples
-* [MarkdownText](https://github.com/Fulanko/reactxp-markdown/tree/master/samples/MarkdownTest)
+* [MarkdownTest](https://github.com/Fulanko/reactxp-markdown/tree/master/samples/MarkdownTest)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details

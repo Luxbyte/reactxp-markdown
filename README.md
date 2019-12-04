@@ -10,6 +10,10 @@ npm install --save reactxp-markdown
 
 ## Updates
 
+### Version 0.1.0
+* Migrated react-native to version 0.61.5
+* Updated dependencies
+
 ### Version 0.0.8
 * Updated dependencies to fix vulnerabilities
 
@@ -22,9 +26,6 @@ npm install --save reactxp-markdown
 * Fixed default styles (heading, lists)
 * Fixed images
 * Added HTML to markdown
-
-### Version 0.0.3
-* Repo has been rewritten to use the same logic for web and native.
 
 ## Documentation
 

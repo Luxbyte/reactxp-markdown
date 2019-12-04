@@ -73,6 +73,11 @@ class Markdown extends React.Component {
   renderer = null;
   markdownParser = null;
 
+  constructor(props) {
+    super(props);
+    this.updateSettings(props);
+  }
+
   /**
    * Only when the copy changes will the markdown render again.
    * @param nextProps
@@ -163,16 +168,9 @@ class Markdown extends React.Component {
 
   /**
    *
-   */
-  componentWillMount() {
-    this.updateSettings(this.props);
-  }
-
-  /**
-   *
    * @param nextProps
    */
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.updateSettings(nextProps);
   }
 

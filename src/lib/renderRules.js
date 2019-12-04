@@ -1,5 +1,6 @@
 var React = require('react');
-var { Text, View, WebView } = require('reactxp');
+var { Text, View } = require('reactxp');
+import WebView from 'reactxp-webview';
 
 import ResizeImage from './resizeImage';
 import openUrl from './util/openUrl';

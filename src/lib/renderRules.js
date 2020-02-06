@@ -236,7 +236,9 @@ const renderRules = {
 
   html_block: (node, children, parent, styles) => {
     return <WebView key={node.key} style={styles.webView} source={{html: node.content}} sandbox={(1 << 6) + (1 << 7) + (1 << 8)}/>;
-  }
+  },
+
+  html_inline: (node, children, parent, styles) => {}
 };
 
 export default renderRules;

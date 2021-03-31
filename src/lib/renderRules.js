@@ -3,6 +3,7 @@ var { Text, View } = require('reactxp');
 import WebView from 'reactxp-webview';
 
 import ResizeImage from './resizeImage';
+import renderInlineHtml from './util/renderInlineHtml';
 import openUrl from './util/openUrl';
 import hasParents from './util/hasParents';
 import applyStyle from './util/applyStyle';
@@ -238,7 +239,14 @@ const renderRules = {
     return <WebView key={node.key} style={styles.webView} source={{html: node.content}} sandbox={(1 << 6) + (1 << 7) + (1 << 8)}/>;
   },
 
-  html_inline: (node, children, parent, styles) => {}
+  html_inline: (node, children, parent, styles) => {
+    const html_rules = ["b", "i", "a", "em", "strong"];
+    for (let i = 0; i < html_rules.length; i++) {
+      if (node.content.trim().startsWith(`<${html_rules[i]}`)) {
+        return renderInlineHtml(html_rules[i], node, parent, styles);
+      }
+    }
+  }
 };
 
 export default renderRules;

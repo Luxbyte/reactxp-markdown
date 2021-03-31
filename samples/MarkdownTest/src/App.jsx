@@ -127,6 +127,13 @@ With a reference later in the document defining the URL location:
 ## HTML
 <iframe src="https://www.youtube.com/embed/gvdf5n-zI14" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Inline HTML
+This text is <b>bold</b>.
+This text is <strong>strong</strong>.
+This text is in <i>italics</i>.
+This text is <em>emphasized</em>.
+This text is a <a href="https://luxbyte.com">link</a>.
+
 `;
 
 class App extends RX.Component {

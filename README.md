@@ -10,7 +10,7 @@ npm install --save reactxp-markdown
 
 ## Updates
 
-### Version 2.0.0
+### Version 0.2.0
 * Added support for the following inline HTML rules: `<b>, <i>, <a>, <em>, <strong>`
 
 ### Version 0.1.1

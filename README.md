@@ -1,6 +1,9 @@
 # reactxp-markdown [![npm version](https://img.shields.io/npm/v/reactxp-markdown.svg?style=flat)](https://www.npmjs.com/package/reactxp-markdown)
 Plugin for [ReactXP](https://microsoft.github.io/reactxp/) that provides support for Markdown for Web, Android and iOS.
 
+**This repo is archived due to ReactXP having reached End of life  
+Please consider moving to ReactNative for web**
+
 Based on [react-native-markdown-renderer](https://github.com/mientjan/react-native-markdown-renderer).
 
 ## Installation
